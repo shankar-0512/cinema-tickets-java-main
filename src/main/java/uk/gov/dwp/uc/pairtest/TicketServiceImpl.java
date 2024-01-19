@@ -49,7 +49,7 @@ public class TicketServiceImpl implements TicketService {
 
         Optional.ofNullable(accountId).filter(id -> id > 0)
                 .orElseThrow(() -> {
-                    String errorMessage = "Invalid Account ID";
+                    String errorMessage = "Invalid Account ID.";
                     LOGGER.severe(errorMessage);
                     throw new InvalidPurchaseException(errorMessage);
                 });
